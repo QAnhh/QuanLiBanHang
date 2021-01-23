@@ -1,6 +1,6 @@
 <?php
 session_start();
-    
+    if(isset($_SESSION['id'])){
     require_once "progress/dbConnect.php";
     ob_start(); 
 ?>
@@ -56,7 +56,7 @@ session_start();
             </div>
             <!-- /menu profile quick info -->
 
-            <br />
+            <br/>
 
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -66,7 +66,9 @@ session_start();
                     <li>
                         <a href="admin.php?page=products">Products</a>
                     </li>
-                    
+                    <li>
+                        <a href="admin.php?page=user">User</a>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -75,7 +77,7 @@ session_start();
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
               
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href=#>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="loginAdmin.php">
                 <span class="fa fa-sign-out" aria-hidden="true"></span>
               </a>
             </div>
@@ -103,6 +105,9 @@ session_start();
             case 'products':
                 include_once 'database/products.php';
                 break;
+            case 'user':
+                include_once 'database/user.php';
+                break;
             default :
                 include_once 'database/products.php';
         }
@@ -110,4 +115,9 @@ session_start();
     </div>
 </body>
 </html>
-
+<?php
+}
+else{
+   header("location:loginAdmin.php");
+}
+?>

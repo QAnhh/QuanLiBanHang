@@ -1,6 +1,7 @@
 <?php
 	if(isset($_POST["saveProfile"])){
 		$name = trim($_POST["name"]);
+		$image = trim($_POST["imageLink"]);
 		$number = trim($_POST["number"]);
 		$price = trim($_POST["price"]);
 
@@ -20,7 +21,7 @@
 	      	{
 		        //thay đổi dữ liệu database
 				$sql = "update products
-						set name = '".$name."',number = '".$number."',price = '".$price."'
+						set name = '".$name."',image = '".$image."',number = '".$number."',price = '".$price."'
 						where id = '".$_GET['edit']."'";
 				$stmt = $conn->prepare($sql);
 				$stmt->execute();

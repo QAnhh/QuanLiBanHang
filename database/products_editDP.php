@@ -19,6 +19,12 @@
 											</div>
 										</div>
 										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="imageLink">Image Link </label>
+											<div class="col-md-6 col-sm-6 ">
+												<input type="text" name="imageLink" class="form-control" value="<?php echo $profile['image'] ?>">
+											</div>
+										</div>
+										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Number </label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" name="number" class="form-control" value="<?php echo $profile['number'] ?>">

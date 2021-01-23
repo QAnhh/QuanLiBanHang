@@ -8,35 +8,35 @@
 									<!-- start form for validation -->
 						<form id="demo-form" data-parsley-validate class="form-horizontal form-label-left" action="#" method="post">
 							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name </label>
+								<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">User Name </label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" name="name" class="form-control">
+									<input type="text" name="userName" required="required" class="form-control " />
 								</div>
 							</div>
 							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" for="imageLink">Image Link </label>
+								<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Full Name </label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" name="imageLink" class="form-control">
+									<input type="text" name="fullName" required="required" class="form-control " />
 								</div>
 							</div>
 							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Number </label>
+								<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Password </label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" name="number" class="form-control">
+									<input type="password" name="password" required="required" class="form-control " />
 								</div>
 							</div>
 							<div class="item form-group">
-								<label for="price" class="col-form-label col-md-3 col-sm-3 label-align">Price </label>
+								<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Confirm password </label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" name="price" class="form-control">
+									<input type="password" name="password2" required="required" class="form-control " />
 								</div>
-							</div>
+							</div>						
 							
 							<div class="ln_solid"></div>
 							<div class="item form-group">
 								<div class="col-md-6 col-sm-6 offset-md-3">
-									<a href="admin.php?page=products" class="btn btn-primary ">Back</a>
-									<button type="submit" name="saveProfile" class="btn btn-success pull-right">Submit</button>
+									<a href="admin.php?page=user" class="btn btn-primary ">Back</a>
+									<button type="submit" name="btn-signup" class="btn btn-success pull-right">Submit</button>
 								</div>
 							</div>
 						</form>

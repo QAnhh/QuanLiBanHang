@@ -2,6 +2,7 @@
     //kiểm tra saveProfile
     if(isset($_POST["saveProfile"])){
         $name = trim($_POST["name"]);
+        $image = trim($_POST["imageLink"]);
         $number = trim($_POST["number"]);
         $price = trim($_POST["price"]);
 
@@ -20,8 +21,8 @@
             try
             {
              
-                $sql = "INSERT into products (name,number,price)
-                        VALUES ('".$name."','".$number."','".$price."')";
+                $sql = "INSERT into products (name,image,number,price)
+                        VALUES ('".$name."','".$image."','".$number."','".$price."')";
                 $stmt = $conn->prepare($sql);
                 $stmt->execute();
                 header("location:admin.php?page=products");
