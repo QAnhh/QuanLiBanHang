@@ -77,7 +77,7 @@ session_start();
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
               
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="loginAdmin.php">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="progress/logoutAdmin.php">
                 <span class="fa fa-sign-out" aria-hidden="true"></span>
               </a>
             </div>
