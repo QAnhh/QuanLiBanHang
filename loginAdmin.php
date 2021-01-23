@@ -3,12 +3,12 @@
     require_once "progress/dbConnect.php";
     ob_start(); 
     if(isset($_POST['login'])){
-        $name = $_POST['username'];
+        $username = $_POST['username'];
         $password = md5($_POST['password']);
         
         try
         {
-          $sql = "SELECT * FROM admin WHERE username like '".$name."' LIMIT 1";
+          $sql = "SELECT * FROM admin WHERE username like '".$username."' LIMIT 1";
           $stmt = $conn->prepare($sql);
           $stmt->execute();
           $row=$stmt->fetch(PDO::FETCH_ASSOC);
