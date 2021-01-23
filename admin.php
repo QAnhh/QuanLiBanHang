@@ -47,10 +47,10 @@ session_start();
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="img/imgdb/ntluon.jpg" alt="..." class="img-circle profile_img">
+                <img src="img/imgdb/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
+                <span>Welcome,</span>'ư'
                 <h2>Admin</h2>
               </div>
             </div>
@@ -90,21 +90,21 @@ session_start();
       
 
     <!-- jQuery -->
-    <script src="js/jsdb/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="js/jsdb/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Custom Theme Scripts -->
-    <script src="js/jsdb/custom.min.js"></script>
+    <script src="js/custom.min.js"></script>
     
         <?php
         $page = $_GET['page']??'products';
         switch ($page)
         {
             case 'products':
-                include_once 'displayDB/products.php';
+                include_once 'database/products.php';
                 break;
             default :
-                include_once 'displayDB/products.php';
+                include_once 'database/products.php';
         }
         ?>
     </div>
